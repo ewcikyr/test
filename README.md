@@ -1,0 +1,3 @@
+# accounts service
+Initial skeleton.
+

@@ -1,0 +1,19 @@
+server:
+    type: simple
+    applicationContextPath: /
+    adminContextPath: /admin # If you plan to use an admin path, you'll need to also use non-root app path
+    connector:
+        type: http
+        port: ${PORT}
+
+logging:
+  level: INFO
+  loggers:
+    io.dropwizard: INFO
+    com.ewcikyr.accounts: DEBUG
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
+      logFormat: "[%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %n"
